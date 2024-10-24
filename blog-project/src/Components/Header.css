@@ -1,0 +1,16 @@
+.nav{
+    display: flex;
+    width: 100vw;
+
+}
+.nav .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+
+}
+.nav .list li{
+    margin-left: 40px;
+
+}
