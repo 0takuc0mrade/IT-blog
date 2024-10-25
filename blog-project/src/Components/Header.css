@@ -14,3 +14,13 @@
     margin-left: 40px;
 
 }
+.nav .list li a:hover{
+    color: royalblue;
+    text-decoration: underline;
+    transition: 300ms ease-out;
+}
+.small a:hover{
+    color: royalblue;
+    text-decoration: underline;
+    transition: 300ms ease-out;
+}
