@@ -5,8 +5,10 @@ import Body from './Components/Body';
 function App() {
   return (
     <>
-      <Header />
-      <Body />
+      <div className="max-w-screen-2xl">
+        <Header />
+        <Body />
+      </div>
     </>
   );
 }
