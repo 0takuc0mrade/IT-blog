@@ -1,7 +1,7 @@
 import React from 'react';
 import IntroPost from './IntroPost';
 import BlogTags from './BlogTags';
-import BlogList from './HomePageComps/BlogList';
+import BlogList from './BlogList';
 
 export default function Body() {
   return (

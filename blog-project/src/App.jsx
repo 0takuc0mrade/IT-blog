@@ -1,12 +1,12 @@
 import './App.css';
-import Header from './Components/Header';
-import Body from './Components/Body';
-import Footer from './Components/Footer';
+import Header from './Components/HomePageComps/Header';
+import Body from './Components/HomePageComps/Body';
+import Footer from './Components/HomePageComps/Footer';
 
 function App() {
   return (
     <>
-      <div className="min-w-[100vw]">
+      <div className="max-w-[100vw]">
         <Header />
         <Body />
         <Footer />
