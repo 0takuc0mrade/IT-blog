@@ -147,9 +147,9 @@ function Footer() {
                 </div>
 
                     {/* newletter for small screens */}
-                    <div className='w-96 smallnews p-4 flex flex-col bg-white rounded-lg shadow-sm  dark:bg-slate-800 mt-16 '>
+                    <div className='w-72 smallnews p-4 flex flex-col bg-white rounded-lg shadow-sm  dark:bg-slate-800 mt-16 '>
 
-                      <form className='flex flex-col justify-center items-center'>
+                      <form className=' flex flex-col justify-center items-center'>
                           <h3 className='font-bold mb-3'>Weekly Newletter</h3>
                           <p className='font-extralight mb-10'>Get blog articles and offers via email</p>
                           <input
