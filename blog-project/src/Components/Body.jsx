@@ -7,9 +7,11 @@ export default function Body() {
   return (
     <>
       <div className="max-w-screen-2xl">
-        <IntroPost />
-        <BlogTags />
-        <BlogList />
+        <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+          <IntroPost />
+          <BlogTags />
+          <BlogList />
+        </div>
       </div>
     </>
   );
