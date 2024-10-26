@@ -16,7 +16,7 @@ function Header() {
         {/*logo for small screen*/}
         <h1 className='head lg:hidden md:hidden'><a href="#"><img src="#" alt="IT Blog" /></a></h1>
 
-        
+
         {/* Hamburger menu */}
         <div className="md:hidden flex justify-end w-screen duration-1000">
           <button
