@@ -11,7 +11,7 @@ function Header() {
 
   return (
     <>
-     <nav className=" dark:bg-gray-900 dark:text-white p-4 ">
+     <nav className=" dark:bg-slate-900 dark:text-white p-4 bg-slate-200 sticky top-0">
       <div className="container mx-auto flex justify-between items-center">
         {/*logo for small screen*/}
         <h1 className='head lg:hidden md:hidden'><a href="#"><img src="#" alt="IT Blog" /></a></h1>
@@ -30,7 +30,7 @@ function Header() {
 
 
         {/* Links for larger screens */}
-        <div className=" items-center justify-center max-w-screen-2xl h-12 pt-2 mt-10  mx-auto  bg-gray-100 dark:bg-gray-900 shadow-md dark:shadow-md dark:shadow-yellow-50 text-lg font-semibold text-gray-900 dark:text-white hidden lg:flex ">
+        <div className=" items-center justify-center max-w-screen-2xl h-12 pt-2 mt-10  mx-auto  bg-gray-100 dark:bg-gray-900 shadow-md dark:shadow-md dark:shadow-yellow-50 text-lg font-semibold text-gray-900 dark:text-white hidden lg:flex lg:w-full ">
         <h1 className='head'><a href="#"><img src="#" alt="IT Blog" /></a></h1>
         <nav className=' nav'>
             <ul className='list '>
@@ -78,7 +78,7 @@ function Header() {
 
       {/* Menu for small screens */}
       {isOpen && (
-        <div className="md:hidden small">
+        <div className="md:hidden small ">
 
 <a
             href="#"
