@@ -1,6 +1,7 @@
 import './LandPage.css';
 import LandingHeader from './LandingHeader';
 import LandingBody from './LandingBody';
+import Footer from '../HomePageComps/Footer';
 
 export default function LandPage() {
   return (
@@ -9,6 +10,7 @@ export default function LandPage() {
       <div className="flex-grow">
         <LandingBody />
       </div>
+      <Footer />
     </div>
   );
 }
