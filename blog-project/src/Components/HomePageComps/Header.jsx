@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 import './Header.css';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -89,6 +90,11 @@ function Header() {
                   </svg>
                 </button>
               </span>
+              <Link to="/signup">
+        <button className="bg-white text-blue-500  rounded-3xl w-16 text-sm dark:bg-slate-900 dark:text-white hover:bg-blue-400 h-10 dark:hover:bg-slate-400 mr-3  transition">
+          Sign Up
+        </button>
+      </Link>
               <ThemeToggle />
             </nav>
           </div>
