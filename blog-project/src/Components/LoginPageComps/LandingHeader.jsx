@@ -1,12 +1,20 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from '../HomePageComps/ThemeToggle';
+import logod from '../../../assets/logo/logod.png';
+import logos from '../../../assets/logo/logos.png';
 
 export default function LandingHeader() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="relative top-0 left-0 right-0 flex justify-between w-full items-center p-4 bg-transparent">
-      <div className="text-2xl font-bold text-white">Logo</div>
+    <nav className="relative top-0 left-0 right-0 flex justify-between w-full items-center p-4 bg-transparent ">
+      <div className="text-2xl font-bold text-white dark:hidden"><img src={logos} alt="" className='w-20 h-24 lg:w-32 lg:h-28 ' /></div>
+
+
+      <div className="text-2xl font-bold text-white hidden dark:block"><img src={logod} alt="" className='w-24 h-20 lg:w-32 lg:h-28 ' /></div>
+
+
+
       <div className="flex space-x-4">
         <div className="hidden sm:flex space-x-4">
 

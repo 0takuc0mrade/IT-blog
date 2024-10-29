@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function LoginSection() {
   const [email, setEmail] = useState('');
@@ -22,7 +23,7 @@ function LoginSection() {
   return (
     <div className="items-center justify-center w-screen  flex h-screen">
           <div className="flex flex-col items-center p-6 w-full max-w-md mx-auto mt-8 bg-white shadow-lg rounded-lg">
-      <h2 className="text-2xl font-semibold text-center mb-6">Login</h2>
+      <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
 
       <form onSubmit={handleEmailLogin} className="w-full space-y-4">
         <div>
@@ -55,12 +56,14 @@ function LoginSection() {
           />
         </div>
 
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded-3xl hover:bg-blue-600 transition"
+
+        <Link to="/home">
+        <button type="submit"  className="w-full bg-blue-500 text-white py-2 rounded-3xl hover:bg-blue-600 transition mt-4"
         >
-          Login
+        Login
         </button>
+        </Link>
+
       </form>
 
       <div className="mt-6 space-y-2 w-full">

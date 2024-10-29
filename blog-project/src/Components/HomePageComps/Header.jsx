@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 import './Header.css';
 import { Link } from 'react-router-dom';
+import logos from '../../../assets/logo/logos.png';
+import logod from '../../../assets/logo/logod.png';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +19,13 @@ function Header() {
           {/*logo for small screen*/}
           <h1 className="head lg:hidden md:hidden">
             <a href="#">
-              <img src="#" alt="IT Blog" />
+              <img src={logos} alt="IT Blog" className='w-28 h-24  dark:hidden' />
+            </a>
+          </h1>
+
+          <h1 className="head lg:hidden md:hidden">
+            <a href="#">
+              <img src={logod} alt="IT Blog" className='w-28 h-24  hidden dark:block ' />
             </a>
           </h1>
 
@@ -41,11 +49,17 @@ function Header() {
 
           {/* Links for larger screens */}
           <div className=" items-center justify-center max-w-screen-2xl h-12 pt-2 mt-10  mx-auto  bg-gray-100 dark:bg-gray-900 shadow-md dark:shadow-md dark:shadow-yellow-50 text-lg font-semibold text-gray-900 dark:text-white hidden lg:flex lg:w-full ">
-            <h1 className="head">
-              <a href="#">
-                <img src="#" alt="IT Blog" />
-              </a>
-            </h1>
+          <h1 className="head hidden mb-4 lg:flex md:hidden">
+            <a href="#">
+              <img src={logos} alt="IT Blog" className='w-28 h-24  dark:hidden' />
+            </a>
+          </h1>
+
+          <h1 className="head hidden mb-4 lg:flex md:hidden">
+            <a href="#">
+              <img src={logod} alt="IT Blog" className='w-28 h-24  hidden dark:block ' />
+            </a>
+          </h1>
             <nav className=" nav">
               <ul className="list ">
                 <li>
@@ -90,11 +104,6 @@ function Header() {
                   </svg>
                 </button>
               </span>
-              <Link to="/signup">
-        <button className="bg-white text-blue-500  rounded-3xl w-16 text-sm dark:bg-slate-900 dark:text-white hover:bg-blue-400 h-10 dark:hover:bg-slate-400 mr-3  transition">
-          Sign Up
-        </button>
-      </Link>
               <ThemeToggle />
             </nav>
           </div>
@@ -102,9 +111,15 @@ function Header() {
 
         {/* Links for medium screens */}
         <div className=" dark:text-white hidden lg:hidden md:flex font-semibold text-gray-900 w-full dark:bg-gray-900 shadow-md dark:shadow-md dark:shadow-yellow-50 mt-3  bg-gray-100 ">
-          <h1 className="head">
+        <h1 className="head lg:hidden md:flex sm:hidden">
             <a href="#">
-              <img src="#" alt="IT Blog" />
+              <img src={logos} alt="IT Blog" className='w-24 h-16  dark:hidden' />
+            </a>
+          </h1>
+
+          <h1 className="head lg:hidden md:flex sm:hidden">
+            <a href="#">
+              <img src={logod} alt="IT Blog" className='w-24 h-16  hidden dark:block ' />
             </a>
           </h1>
           <nav className=" nav">
@@ -125,7 +140,7 @@ function Header() {
                 <a href="">Contact</a>
               </li>
             </ul>
-            <span className="mr-3 mt-1 justify-end grow flex  m-0  relative h-7">
+            <span className="mr-3 mt-5 justify-end grow flex  m-0  relative h-7">
               <input
                 type="search"
                 name=""
@@ -151,7 +166,8 @@ function Header() {
                 </svg>
               </button>
             </span>
-            <ThemeToggle />
+            <span className='mt-5'><ThemeToggle/></span>
+            
           </nav>
         </div>
 
