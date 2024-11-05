@@ -1,22 +1,32 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from '../HomePageComps/ThemeToggle';
+import logod from '../../../assets/logo/logod.png';
+import logos from '../../../assets/logo/logos.png';
 
 export default function LandingHeader() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="relative top-0 left-0 right-0 flex justify-between w-full items-center p-4 bg-transparent">
-      <div className="text-2xl font-bold text-white">Logo</div>
+    <nav className="relative top-0 left-0 right-0 flex justify-between w-full items-center p-4 bg-transparent ">
+      <div className="text-2xl font-bold text-white dark:hidden"><img src={logos} alt="" className='w-20 h-24 lg:w-32 lg:h-28 ' /></div>
+
+
+      <div className="text-2xl font-bold text-white hidden dark:block"><img src={logod} alt="" className='w-24 h-20 lg:w-32 lg:h-28 ' /></div>
+
+
+
       <div className="flex space-x-4">
         <div className="hidden sm:flex space-x-4">
-          <Link
-            to="/home"
-            className="px-4 py-2 text-sm font-medium text-white hover:bg-white hover:bg-opacity-20 rounded-md transition duration-150 ease-in-out"
+
+        <Link to="/login">
+          <button className="px-4 py-2 text-sm font-medium text-white bg-blue-500 hover:bg-blue-700 rounded-md transition duration-150 ease-in-out"
           >
-            Sign In
-          </Link>
+            Login
+          </button>
+        </Link>
+          
           <Link
-            to="/home"
+            to="/signup"
             className="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md transition duration-150 ease-in-out"
           >
             Create Account
@@ -44,14 +54,16 @@ export default function LandingHeader() {
           </button>
           {isOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-500  rounded-md shadow-lg py-1">
+                
+        <Link to="/login">
+          <button className="w-20 ml-7 px-4 py-2 text-sm font-medium text-white bg-blue-500 hover:bg-blue-700 rounded-md transition duration-150 ease-in-out"
+          >
+            Login
+          </button>
+        </Link>
+             
               <Link
-                to="/home"
-                className="block px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-blue-600 hover:text-white hover:scale-105 transition-all duration-150 ease-in-out"
-              >
-                Sign In
-              </Link>
-              <Link
-                to="/home"
+                to="/signup"
                 className="block px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-blue-600 hover:text-white hover:scale-105 transition-all duration-150 ease-in-out"
               >
                 Create Account

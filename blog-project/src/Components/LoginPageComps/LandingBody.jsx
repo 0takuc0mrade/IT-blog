@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function LandingBody() {
   return (
@@ -13,9 +14,12 @@ export default function LandingBody() {
         <p className="text-gray-200 text-lg sm:text-xl md:text-2xl text-shadow">
           Let's explore WEB 3.0
         </p>
-        <button className="mt-6 px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-md hover:bg-blue-700 transition duration-300 ease-in-out">
-          Get started
-        </button>
+
+        <Link to="/home">
+          <button className="mt-6 px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-md hover:bg-blue-700 transition duration-300 ease-in-out">
+            Get started
+          </button>
+        </Link>
       </div>
     </div>
   );
