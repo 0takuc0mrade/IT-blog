@@ -15,13 +15,11 @@ export default function LandingBody() {
           Let's explore WEB 3.0
         </p>
 
-
-        <Link to="/signup">
-        <button className="mt-6 px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-md hover:bg-blue-700 transition duration-300 ease-in-out">
-          Get started
-        </button>
+        <Link to="/home">
+          <button className="mt-6 px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-md hover:bg-blue-700 transition duration-300 ease-in-out">
+            Get started
+          </button>
         </Link>
-       
       </div>
     </div>
   );
