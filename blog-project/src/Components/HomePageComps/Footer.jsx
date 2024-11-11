@@ -1,5 +1,7 @@
 import React from 'react';
 import './Footer.css';
+import logos from '../../../assets/logo/logos.png';
+import logod from '../../../assets/logo/logod.png';
 
 function Footer() {
   return (
@@ -91,7 +93,21 @@ function Footer() {
               <div>
                 <nav>
                   <a href="">
-                    <img src="" alt="" />
+                    <h1 className="head lg:hidden md:hidden">
+                      <img
+                        src={logos}
+                        alt="IT Blog"
+                        className="w-28 h-24  dark:hidden"
+                      />
+                    </h1>
+
+                    <h1 className="head lg:hidden md:hidden">
+                      <img
+                        src={logod}
+                        alt="IT Blog"
+                        className="w-28 h-24  hidden dark:block "
+                      />
+                    </h1>
                   </a>
                   <p>&copy; IT Blog 2024. All rights Reserved</p>
                 </nav>
@@ -222,7 +238,21 @@ function Footer() {
               <div>
                 <nav>
                   <a href="">
-                    <img src="#" alt="IT Blog" />
+                    <h1 className="head lg:hidden md:hidden">
+                      <img
+                        src={logos}
+                        alt="IT Blog"
+                        className="w-28 h-24  dark:hidden"
+                      />
+                    </h1>
+
+                    <h1 className="head lg:hidden md:hidden">
+                      <img
+                        src={logod}
+                        alt="IT Blog"
+                        className="w-28 h-24  hidden dark:block "
+                      />
+                    </h1>
                   </a>
                   <p className="font-extralight text-sm mt-4">
                     &copy; IT Blog 2024. All rights Reserved
