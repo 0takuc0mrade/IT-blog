@@ -1,22 +1,31 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { supabase } from '../../utils/supabaseClient';
 
 function SignUpSection() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
-  const handleEmailSignUp = (e) => {
+  const handleEmailSignUp = async (e) => {
     e.preventDefault();
-    alert(`Signing up with Email: ${email}`);
-    setEmail('');
-    setPassword('');
+    try {
+      const { error, user } = await supabase.auth.signUp({
+        email,
+        password,
+      });
+
+      if (error) throw error;
+      navigate('/home');
+      return { user };
+    } catch (error) {
+      setError(error.message);
+    }
   };
 
   const handleGoogleSignUp = () => {
     alert('Signing up with Google');
-  };
-
-  const handleAppleSignUp = () => {
-    alert('Signing up with Apple');
   };
 
   return (
@@ -25,6 +34,11 @@ function SignUpSection() {
         <h2 className="text-2xl font-bold text-center mb-6">Sign Up</h2>
 
         <form onSubmit={handleEmailSignUp} className="w-full space-y-4">
+          {error && (
+            <div className="rounded-md bg-red-50 p-4">
+              <div className="text-sm text-red-700">{error}</div>
+            </div>
+          )}
           <div>
             <label
               htmlFor="email"
@@ -75,13 +89,6 @@ function SignUpSection() {
             className="w-full bg-red-500 text-white py-2 rounded-3xl hover:bg-red-600 transition"
           >
             Sign Up with Google
-          </button>
-
-          <button
-            onClick={handleAppleSignUp}
-            className="w-full bg-black text-white py-2 rounded-3xl hover:bg-gray-800 transition"
-          >
-            Sign up with apple
           </button>
         </div>
       </div>
